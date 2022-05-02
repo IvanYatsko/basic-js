@@ -26,7 +26,7 @@ class VigenereCipheringMachine {
   }
   encrypt(message, key) {
     if (message === undefined || key === undefined) {
-      throw new Error();
+      throw new Error('Incorrect arguments!');
     }
     message = message.toUpperCase().split("");
     key = key.toUpperCase().split("");
@@ -49,7 +49,7 @@ class VigenereCipheringMachine {
 
   decrypt(encryptedMessage, key) {
     if (encryptedMessage === undefined || key === undefined) {
-      throw new Error();
+      throw new Error('Incorrect arguments!');
     }
     encryptedMessage = encryptedMessage.toUpperCase().split("");
     key = key.toUpperCase().split("");
